@@ -16,23 +16,25 @@ make status
 
 Проект будет доступен локально по адресу: `http://localhost` (порт 80).
 
-## Команды 
-- make up — запустить контейнеры
-- make down — остановить контейнеры
-- make restart — перезапустить контейнеры
-- make fresh — пересоздать базу данных с нуля (migrate:fresh)
-- make logs — просмотр логов Docker в реальном времени
+## Управление контейнерами
 
-## Методы и примеры проверки URL
+- make up - запустить контейнеры
+- make down - остановить контейнеры
+- make restart - перезапустить контейнеры
+- make migrate - миграции
+- make fresh - пересоздать бд (migrate:fresh)
+- make clear-cache - очистка маршртутов и конфигурации laravel
+
+## Примеры проверки URL
 
 ### 1. Создание short_url 
 
-- curl -X POST http://localhost/api/links -H "Content-Type: application/json" -H "Accept: application/json" -d '{"url": "https://google.com"}'
+- make create-test
 
 ### 2. Редирект по short_url
 
-- curl -I http://localhost/Fq6WJq
+- make redirect-test
 
 ### 3. Статистика переходов
 
-- curl -X GET http://localhost/api/links/Fq6WJq/stats -H "Accept: application/json"
+- make stat-test

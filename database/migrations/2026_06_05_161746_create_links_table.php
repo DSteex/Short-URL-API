@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('code', 6)->unique();
             $table->text('origin_url');
-            $table->unsignedInteger('clicks')->default(0);
+            $table->unsignedInteger('cliks')->default(0);
             $table->timestamps();
         });
     }

@@ -53,7 +53,7 @@ class LinkController extends Controller
     {
         $link = Links::where('code', $code)->firstOrFail();
 
-        $link->increment('clicks');
+        $link->increment('cliks');
 
         return redirect()->away($link->origin_url, 302);
     }

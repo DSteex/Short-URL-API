@@ -41,7 +41,7 @@ redirect-test:
 	@echo "Проверка редиректа:"
 	@curl -I -H "Accept: application/json" $(URL_BASE)/$$(cat .short-url)
 
-stats-test:
+stat-test:
 	@echo "Cтатистики кликов:"
 	@curl -X GET $(URL_BASE)/api/links/$$(cat .short-url)/stats -H "Accept: application/json"
 	@echo "\n"

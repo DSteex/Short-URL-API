@@ -1,4 +1,4 @@
-.PHONY: init up down restart migrate fresh status logs shell test clear-cache test-post test-redirect test-stats
+.PHONY: init up down restart migrate fresh test clear-cache create-test redirect-test stat-test
 
 SAIL = ./vendor/bin/sail
 URL_BASE = http://localhost
